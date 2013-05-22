@@ -1,12 +1,12 @@
 `include "nonCarryAdder.v"
 
-module fullAdder( sum, c_out, c_in, a, b );
+module fullAdder( sum, c_out, c_in, a, b);
     input a, b, c_in;
 	 output sum, c_out;
 	 
 	 wire sumM1, abM1, aM1, bM1;
 	 wire sumM2, abM2, aM2, bM2;
-	 
+ 
 	 //set Input of M1 & System
 	 assign aM1 = a;
 	 assign bM1 = b;

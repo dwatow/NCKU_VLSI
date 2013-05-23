@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-05-22T16:02:40</DateModified>
-  <ModuleName>mux_3b</ModuleName>
-  <SummaryTimeStamp>2013-05-22T16:01:40</SummaryTimeStamp>
+  <DateModified>2013-05-23T13:39:38</DateModified>
+  <ModuleName>top</ModuleName>
+  <SummaryTimeStamp>2013-05-23T13:35:37</SummaryTimeStamp>
   <SavedFilePath>D:/GitHub/NCKU_VLSI/iseconfig/fullAdder.xreport</SavedFilePath>
   <ImplementationReportsDirectory>D:/GitHub/NCKU_VLSI\</ImplementationReportsDirectory>
-  <DateInitialized>2013-05-22T16:02:37</DateInitialized>
+  <DateInitialized>2013-05-23T13:39:36</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

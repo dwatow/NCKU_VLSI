@@ -19,15 +19,11 @@ parameter countWidth = 8;
 	//e. _areset =1 makes the counter set to zero asynchronously, while 
 	//       _aset =1 let the counter set to its maximum value asynchronously. 
 	//   If none of them are high, the counter is operated regularly.
-	wire _continueCount;
-	
-	assign _continueCount = _areset & _aset;
-	
-	always@(_areset, _aset, continueCount)
+	always@(_areset, _aset, dcout)
 	begin
-		if (_areset & _continueCount)
+		if (_areset == 1)
 			dcout = 8'b1111_1111;
-		else if (_aset & _continueCount)
+		else if (_aset == 1)
 		   dcout = 8'b0000_0000;
 		else
 		   dcout = counter;
@@ -68,7 +64,7 @@ parameter countWidth = 8;
 	
 endmodule
 
-//g. The priority of the control signal is _areset > _aset > _load. This is to avoid un-intentionally activate these three signals at the same time.
+
 
 
 //k. You may add other signal additional pins and function as long as you clearly specify and explain.

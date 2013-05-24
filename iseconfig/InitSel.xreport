@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-05-24T09:42:07</DateModified>
+  <DateModified>2013-05-24T09:52:43</DateModified>
   <ModuleName>InitSel</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>D:/GitHub/NCKU_VLSI/iseconfig/coreCount8Sub.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>D:/GitHub/NCKU_VLSI\</ImplementationReportsDirectory>
-  <DateInitialized>2013-05-24T09:42:07</DateInitialized>
+  <SavedFilePath>D:/GitHub/NCKU_VLSI/iseconfig/InitSel.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>D:/GitHub/NCKU_VLSI</ImplementationReportsDirectory>
+  <DateInitialized>2013-05-24T09:52:43</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

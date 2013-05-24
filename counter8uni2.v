@@ -1,3 +1,7 @@
+`include "InitSel.v"
+`include "Counter8combi.v"
+`include "CircleStop.v"
+
 module counter8uni2(clk, _areset, _aset, _load, preld_val, _updown, _wrapstop, dcout, overflow);
 parameter countWidth = 8;
 
@@ -11,40 +15,11 @@ parameter countWidth = 8;
 
 	output [countWidth-1:0] dcout;
 	output overflow;
-	
-	reg [countWidth-1:0] dcout;
-	reg [countWidth-1:0] counter;
-	reg overflow;
 
-	//e. _areset =1 makes the counter set to zero asynchronously, while 
-	//       _aset =1 let the counter set to its maximum value asynchronously. 
-	//   If none of them are high, the counter is operated regularly.
-//	always@(_areset, _aset, dcout)
-//	begin
-//		if (_areset == 1)
-//			dcout = 8'b1111_1111;
-//		else if (_aset == 1)
-//		   dcout = 8'b0000_0000;
-//		else
-//		   dcout = counter;
-//	end
+	wire [countWidth-1:0] tCount_M12, tCountM23;
 
-	always@(posedge clk, negedge _load, negedge _updown)
-	begin
-	//f. If the signal load is active (high), 
-	//   the the preload value (preld-val) will be loaded, 
-	//   otherwise, no effect to the counter.
-	   if (!_load)
-		   counter <= preld_val;
-		else
-		begin
-		//h. _updown indicates whether the counter 
-		//   is counted upward (when high) or downward (when low).
-			if (!_updown)
-				counter <= counter - 1;
-			else
-				counter <= counter + 1;
-		end
-	end
 	
+	InitSel       M1( .oCountInitValue(tCount_M12), ._iReset(_areset), ._iSet(_aset), ._iLoad(_load), .iPreldVal(preld_val), .iCountValue(dcout) );
+	Counter8combi M2( .oCount(tCountM23), .iClk(clk), ._iIsAddOut(_updown), .iCount(tCount_M12) );
+	CircleStop    M3( .oCount(dcout), .iClk(clk), .iCount(tCountM23), ._iWrapstop(_wrapstop), .oOverflow(overflow) );
 endmodule

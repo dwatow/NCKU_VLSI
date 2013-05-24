@@ -1,0 +1,4 @@
+vhdtdtfi -lib work D:/GitHub/NCKU_VLSI/coreCount8Add.v -lang verilog -prj NCKU_VLSI -o coreCount8Add.spl -module coreCount8Add -template C:/Xilinx/13.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 coreCount8Add.spl D:/GitHub/NCKU_VLSI/coreCount8Add.sym 
+vhdtdtfi -lib work D:/GitHub/NCKU_VLSI/coreCount8Add.v -lang verilog -prj NCKU_VLSI -o coreCount8Add.spl -module coreCount8Add -template C:/Xilinx/13.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 coreCount8Add.spl D:/GitHub/NCKU_VLSI/coreCount8Add.sym 
